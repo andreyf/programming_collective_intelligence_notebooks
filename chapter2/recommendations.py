@@ -1,5 +1,5 @@
-# A dictionary of movie critics and their ratings of a small
-# set of movies
+# Словарь кинокритиков и выставленных ими оценок для небольшого набора
+# данных о фильмах
 critics={'Lisa Rose': {'Lady in the Water': 2.5, 'Snakes on a Plane': 3.5,
  'Just My Luck': 3.0, 'Superman Returns': 3.5, 'You, Me and Dupree': 2.5, 
  'The Night Listener': 3.0},
@@ -131,7 +131,7 @@ def calculateSimilarItems(prefs,n=10):
   for item in itemPrefs:
     # Status updates for large datasets
     c+=1
-    if c%100==0: print "%d / %d" % (c,len(itemPrefs))
+    if c%100==0: print ("%d / %d" % (c,len(itemPrefs)))
     # Find the most similar items to this one
     scores=topMatches(itemPrefs,item,n=n,similarity=sim_distance)
     result[item]=scores
